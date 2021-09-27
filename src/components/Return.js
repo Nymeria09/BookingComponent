@@ -18,17 +18,13 @@ export class Return extends Component {
                 <DateSelector text = "RETURN DATE" icon = "fas fa-calendar-alt w3-text-grey w3-margin-left" date = {this.props.returnDate} min = {this.props.departureDate} handleChange = {this.props.handleChangeRD} />
             </div>
 
-            < div className = "w3-third">
-                <div className = "w3-row">
-                <div className = "w3-threequarter">
-                    <TravelClass travelclass = {this.props.travelclass} handleChange = {this.props.handleChange} />
-                </div>
-                <div className = "w3-quarter">
-                    <i className = "fa fa-check w3-xlarge w3-margin-left w3-hover-text-black margin-top" onClick = {this.props.check}></i>
-                    <button className = "w3-hide-medium w3-hide-large w3-margin-top w3-padding w3-hover-text-black w3-round w3-border" onClick = {this.props.check}>SEARCH</button>
-                </div>
-                </div>
-            </div>     
+            <div className = "w3-third">
+                <TravelClass travelclass = {this.props.travelclass} handleChange = {this.props.handleChange} />
+             </div>
+            
+            <div className = "w3-right" >
+              <button className = "w3-margin-top w3-padding w3-hover-text-black w3-round w3-border" onClick = {this.props.check}>SEARCH</button>
+            </div>
         </div>
         </>
     );
