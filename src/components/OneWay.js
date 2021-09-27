@@ -9,26 +9,10 @@ export class OneWay extends Component {
   buttonvisibility(){
       const temp = [];
       if (this.props.visibility === true){
-        temp.push(<div className = "w3-row">
-
-            <div className = "w3-threequarter">
-                <TravelClass travelclass = {this.props.travelclass} handleChange = {this.props.handleChange} />
-            </div>
-
-            <div className = "w3-quarter">
-                        
-                <i className = "w3-hide-small fa fa-check w3-xlarge w3-hover-text-black margin-top w3-margin-left" onClick = {this.props.check}></i>  
-                <button className = "w3-hide-medium w3-hide-large w3-margin-top w3-padding w3-hover-text-black w3-round w3-border" onClick = {this.props.check}>SEARCH</button>
-
-            </div>
-
+        temp.push(<div className = "w3-right">
+             <button className = "w3-margin-top w3-padding w3-hover-text-black w3-round w3-border" onClick = {this.props.check}>SEARCH</button>
           </div>
         );
-      }
-      else{
-
-        temp.push(<TravelClass travelclass = {this.props.travelclass} handleChange = {this.props.handleChange} />);
-
       }
       return temp;
   }
@@ -43,8 +27,10 @@ export class OneWay extends Component {
             </div>
 
             <div className = "w3-half">
-                {this.buttonvisibility()}
+              <TravelClass travelclass = {this.props.travelclass} handleChange = {this.props.handleChange} />
             </div>
+             
+            {this.buttonvisibility()}
 
         </div>
         </>
